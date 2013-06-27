@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE4630F1-0A67-47EE-A5EE-C7B4DD519124}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cancleflight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cancleflight.Designer.cs">
+      <DependentUpon>cancleflight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="employeeRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeRecords.Designer.cs">
+      <DependentUpon>employeeRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeScreen.Designer.cs">
+      <DependentUpon>EmployeeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flightDetail.cs" />
+    <Compile Include="Flightentry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flightentry.Designer.cs">
+      <DependentUpon>Flightentry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_employee.Designer.cs">
+      <DependentUpon>new_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="online.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="online.Designer.cs">
+      <DependentUpon>online.cs</DependentUpon>
+    </Compile>
+    <Compile Include="passengerDetailClass.cs" />
+    <Compile Include="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Passengerdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Passengerdetail.Designer.cs">
+      <DependentUpon>Passengerdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerScreen.Designer.cs">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashScreen.Designer.cs">
+      <DependentUpon>splashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="travelagencyDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>travelagencyDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cancleflight.resx">
+      <DependentUpon>cancleflight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeRecords.resx">
+      <DependentUpon>employeeRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeScreen.resx">
+      <DependentUpon>EmployeeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flightentry.resx">
+      <DependentUpon>Flightentry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_employee.resx">
+      <DependentUpon>new_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="online.resx">
+      <DependentUpon>online.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Passengerdetail.resx">
+      <DependentUpon>Passengerdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerScreen.resx">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashScreen.resx">
+      <DependentUpon>splashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="travelagencyDataSet2.xsc">
+      <DependentUpon>travelagencyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="travelagencyDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>travelagencyDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="travelagencyDataSet2.xss">
+      <DependentUpon>travelagencyDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
