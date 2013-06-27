@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
 
         public void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide();                                        //open passenger details
             pd.ShowDialog();
             this.Show();
         }
