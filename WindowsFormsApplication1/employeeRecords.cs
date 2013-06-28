@@ -60,6 +60,11 @@ namespace WindowsFormsApplication1
             db.Save();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         
     }
 }

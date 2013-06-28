@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1
 
                         MessageBox.Show("Admin");
 
-                        mgrForm.Show();
+                        mgrForm.ShowDialog();
                     }
                     else if (passCheck[3][i].Contains("Employee"))                             //employee evaluation
                     {
@@ -108,7 +108,7 @@ namespace WindowsFormsApplication1
                         
                         MessageBox.Show("Employee");
                         
-                        empForm.Show();
+                        empForm.ShowDialog();
 
                     }
                     break;

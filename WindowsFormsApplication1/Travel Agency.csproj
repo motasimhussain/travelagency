@@ -53,6 +53,12 @@
     <Compile Include="cancleflight.Designer.cs">
       <DependentUpon>cancleflight.cs</DependentUpon>
     </Compile>
+    <Compile Include="customerRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerRecords.Designer.cs">
+      <DependentUpon>customerRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBConnect.cs" />
     <Compile Include="employeeRecords.cs">
       <SubType>Form</SubType>
@@ -86,6 +92,11 @@
       <DependentUpon>online.cs</DependentUpon>
     </Compile>
     <Compile Include="passengerDetailClass.cs" />
+    <Compile Include="passengerDetailSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>passengerDetailSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="payment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +136,9 @@
     </Compile>
     <EmbeddedResource Include="cancleflight.resx">
       <DependentUpon>cancleflight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerRecords.resx">
+      <DependentUpon>customerRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employeeRecords.resx">
       <DependentUpon>employeeRecords.cs</DependentUpon>
@@ -167,6 +181,17 @@
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="passengerDetailSet.xsc">
+      <DependentUpon>passengerDetailSet.xsd</DependentUpon>
+    </None>
+    <None Include="passengerDetailSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>passengerDetailSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="passengerDetailSet.xss">
+      <DependentUpon>passengerDetailSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

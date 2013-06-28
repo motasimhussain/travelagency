@@ -261,8 +261,9 @@
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Flightentry";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Flight Entry";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Flightentry_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Flightentry_FormClosed);

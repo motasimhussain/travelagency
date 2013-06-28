@@ -41,6 +41,7 @@
             this.emp_name = new System.Windows.Forms.TextBox();
             this.last_name = new System.Windows.Forms.TextBox();
             this.NIC = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // newUser
@@ -99,7 +100,7 @@
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(191, 413);
+            this.Button1.Location = new System.Drawing.Point(350, 403);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(103, 23);
             this.Button1.TabIndex = 6;
@@ -156,11 +157,22 @@
             this.NIC.Size = new System.Drawing.Size(239, 20);
             this.NIC.TabIndex = 12;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(55, 403);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // new_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 466);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.NIC);
             this.Controls.Add(this.last_name);
             this.Controls.Add(this.emp_name);
@@ -174,8 +186,9 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.newPass);
             this.Controls.Add(this.newUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "new_employee";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Employee";
             this.Load += new System.EventHandler(this.new_employee_Load);
             this.ResumeLayout(false);
@@ -198,5 +211,6 @@
         private System.Windows.Forms.TextBox emp_name;
         private System.Windows.Forms.TextBox last_name;
         private System.Windows.Forms.TextBox NIC;
+        private System.Windows.Forms.Button button2;
     }
 }

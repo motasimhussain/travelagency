@@ -13,12 +13,14 @@ namespace WindowsFormsApplication1
     public partial class Passengerdetail : Form
     {
         //passengerDetailClass pd = new passengerDetailClass();
-
+        Form opner;
         Flightentry fe;
 
         public Passengerdetail()
         {
             InitializeComponent();
+
+            opner = ParentForm;
 
             //fe = new Flightentry(f_name.Text, l_name.Text, father_name.Text, dob.Text, age.Text, address.Text, city.Text, state.Text, zip.Text, phone.Text, nic.Text);
 

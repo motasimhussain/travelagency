@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
 
         new_employee newEmp = new new_employee();
         employeeRecords empRec = new employeeRecords();
+        customerRecords cRec;
 
         public ManagerScreen()
         {
@@ -40,12 +41,32 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
             empRec.ShowDialog();
+        }
 
-            this.Show();
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are You sure you want to log out?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                //do nothing!
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cRec = new customerRecords();
+            cRec.Owner = this;
+            cRec.ShowDialog();
         }
     }
 }
