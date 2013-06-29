@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
         new_employee newEmp = new new_employee();
         employeeRecords empRec = new employeeRecords();
         customerRecords cRec;
+        dailyRep dr;
 
         public ManagerScreen()
         {
@@ -67,6 +68,12 @@ namespace WindowsFormsApplication1
             cRec = new customerRecords();
             cRec.Owner = this;
             cRec.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dr = new dailyRep();
+            dr.ShowDialog();
         }
     }
 }
