@@ -359,7 +359,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(584, 462);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.father_name);
@@ -390,14 +389,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Passengerdetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Passenger Detail";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.Passengerdetail_Load);
-            this.Shown += new System.EventHandler(this.Passengerdetail_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

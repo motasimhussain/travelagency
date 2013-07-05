@@ -17,9 +17,10 @@ namespace WindowsFormsApplication1
     {
 
         ManagerScreen mgrForm = new ManagerScreen();
-        EmployeeScreen empForm = new EmployeeScreen();
-        
+        //EmployeeScreen empForm = new EmployeeScreen();
+        EmployeeScreen empForm;
 
+        string uname;
 
         DBConnect db = new DBConnect();
 
@@ -28,29 +29,29 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
 
-            mgrForm.FormClosed += new FormClosedEventHandler(mgrForm_FormClosed);
-            empForm.FormClosed += new FormClosedEventHandler(empForm_FormClosed);
+            //mgrForm.FormClosed += new FormClosedEventHandler(mgrForm_FormClosed);
+            //empForm.FormClosed += new FormClosedEventHandler(empForm_FormClosed);
         }
 
         void mgrForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             //this.Close();
-            this.Show();
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox1.Text = "UserName";
-            textBox2.Text = "Password";
-            textBox1.Focus();
+            //this.Show();
+            //textBox1.Clear();
+            //textBox2.Clear();
+            //textBox1.Text = "UserName";
+            //textBox2.Text = "Password";
+            //textBox1.Focus();
         }
 
         void empForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             //this.Close();
-            this.Show();
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox1.Text = "UserName";
-            textBox2.Text = "Password";
+            //this.Show();
+            //textBox1.Clear();
+            //textBox2.Clear();
+            //textBox1.Text = "UserName";
+            //textBox2.Text = "Password";
 
 
         }
@@ -93,6 +94,7 @@ namespace WindowsFormsApplication1
 
                 if (textBox1.Text == passCheck[1][i] && textBox2.Text == passCheck[2][i]) //checking username and pass
                 {
+                    uname = passCheck[1][i];
 
                     if (passCheck[3][i].Contains("Admin"))                                //admin evaluation
                     {
@@ -100,15 +102,33 @@ namespace WindowsFormsApplication1
 
                         MessageBox.Show("Admin");
 
+                        mgrForm.Owner = this;
                         mgrForm.ShowDialog();
+
+                        this.Show();
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        textBox1.Text = "UserName";
+                        textBox2.Text = "Password";
+                        textBox1.Focus();
                     }
                     else if (passCheck[3][i].Contains("Employee"))                             //employee evaluation
                     {
                         this.Hide();
-                        
                         MessageBox.Show("Employee");
-                        
+
+                        empForm = new EmployeeScreen(uname);
+                        empForm.Owner = this;
+
+
                         empForm.ShowDialog();
+
+                        this.Show();
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        textBox1.Text = "UserName";
+                        textBox2.Text = "Password";
+                        textBox1.Focus();
 
                     }
                     break;

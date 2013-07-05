@@ -129,6 +129,13 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="salesRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesRecord.Designer.cs">
+      <DependentUpon>salesRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search.cs" />
     <Compile Include="splashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +191,9 @@
     </Compile>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesRecord.resx">
+      <DependentUpon>salesRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splashScreen.resx">
       <DependentUpon>splashScreen.cs</DependentUpon>

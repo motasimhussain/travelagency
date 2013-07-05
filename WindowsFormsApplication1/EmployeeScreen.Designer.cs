@@ -52,7 +52,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 43);
+            this.button2.Location = new System.Drawing.Point(3, 62);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(194, 34);
             this.button2.TabIndex = 1;
@@ -62,22 +62,23 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(3, 83);
+            this.button3.Location = new System.Drawing.Point(3, 180);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(194, 34);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Cancle";
+            this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(3, 123);
+            this.button4.Location = new System.Drawing.Point(3, 121);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(194, 35);
             this.button4.TabIndex = 3;
             this.button4.Text = "Sales Record";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -108,8 +109,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.button5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 129);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -117,7 +118,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 161);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 236);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // EmployeeScreen

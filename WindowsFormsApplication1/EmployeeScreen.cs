@@ -14,12 +14,15 @@ namespace WindowsFormsApplication1
     {
 
         //Flightentry fe = new Flightentry();
-        Passengerdetail pd = new Passengerdetail();
+        //Passengerdetail pd = new Passengerdetail();
+        Passengerdetail pd;
+        salesRecord sr;
+        string employee;
        
 
-        public EmployeeScreen()
+        public EmployeeScreen(string uname)
         {
-
+            employee = uname;
             InitializeComponent();
         }
 
@@ -34,6 +37,8 @@ namespace WindowsFormsApplication1
         public void button5_Click(object sender, EventArgs e)
         {
             //this.Hide();                                        //open passenger details
+            pd = new Passengerdetail(employee);
+
             pd.Owner = this;
             pd.ShowDialog();
             //this.Show();
@@ -59,6 +64,12 @@ namespace WindowsFormsApplication1
             {
                 //do nothing!
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            sr = new salesRecord(employee);
+            sr.ShowDialog();
         }
     }
 }

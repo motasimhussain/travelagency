@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textBox3
@@ -55,13 +55,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 20);
             this.textBox3.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(248, 389);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 20);
-            this.textBox5.TabIndex = 7;
             // 
             // textBox6
             // 
@@ -237,11 +230,21 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "  UBIT AIRLINE \r\nTRAVEL AGENCY";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(248, 392);
+            this.maskedTextBox1.Mask = "0000000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBox1.TabIndex = 23;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
             // Flightentry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 462);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBox3);
@@ -257,7 +260,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox3);
@@ -276,7 +278,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label1;
@@ -294,5 +295,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

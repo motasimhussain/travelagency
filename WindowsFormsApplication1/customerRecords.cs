@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
 
         DBConnect db = new DBConnect();
+        search se = new search();
 
         public customerRecords()
         {
@@ -23,6 +24,8 @@ namespace WindowsFormsApplication1
         private void customerRecords_Load(object sender, EventArgs e)
         {
             db.Bind(dataGridView1, "passenger_detail");
+            tabControl1.ItemSize = new Size(0, 1);
+            tabControl1.SizeMode = TabSizeMode.Fixed;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -42,16 +45,67 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Do you really want to delete this entry?\n This will remove the entire row! \n This is an irrecoverable process!", "Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            if (tabControl1.SelectedTab  == tabPage1)
             {
-                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+
+                var result = MessageBox.Show("Do you really want to delete this entry?\n This will remove the entire row! \n This is an irrecoverable process!", "Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
                 {
-                    dataGridView1.Rows.RemoveAt(item.Index);
+                    foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+                    {
+                        dataGridView1.Rows.RemoveAt(item.Index);
+                    }
                 }
+
+                db.Save();
+            }
+            else if (tabControl1.SelectedTab == tabPage2)
+            {
+                var result = MessageBox.Show("Do you really want to delete this entry?\n This will remove the entire row! \n This is an irrecoverable process!", "Alert!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow item in this.dataGridView2.SelectedRows)
+                    {
+                        dataGridView2.Rows.RemoveAt(item.Index);
+                    }
+                }
+
+                db.Save();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(radioButton1.Checked == true && textBox1.Text != "")
+            {
+                se.Bind(dataGridView2,"passenger_detail","first_name",textBox1.Text);
+            }
+            else if (radioButton1.Checked == true && textBox1.Text != "")
+            {
+                se.Bind(dataGridView2, "passenger_detail", "nic", textBox1.Text);
+            }
+            else if (radioButton1.Checked == true && textBox1.Text != "")
+            {
+                se.Bind(dataGridView2, "passenger_detail", "passport", textBox1.Text);
+            }
+            else if (radioButton1.Checked == true && textBox1.Text != "")
+            {
+                se.Bind(dataGridView2, "passenger_detail", "airline_name", textBox1.Text);
+            }
+            else if (radioButton1.Checked == true && textBox1.Text != "")
+            {
+                se.Bind(dataGridView2, "passenger_detail", "destination", textBox1.Text);
             }
 
-            db.Save();
+            if (textBox1.Text != "")
+            {
+                tabControl1.SelectedTab = tabPage2;
+            }
         }
     }
 }

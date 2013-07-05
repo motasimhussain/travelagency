@@ -13,14 +13,18 @@ namespace WindowsFormsApplication1
     public partial class Passengerdetail : Form
     {
         //passengerDetailClass pd = new passengerDetailClass();
-        Form opner;
+        //Form opner;
         Flightentry fe;
 
-        public Passengerdetail()
+        string employee;
+
+        public Passengerdetail(string uname)
         {
             InitializeComponent();
 
-            opner = ParentForm;
+            employee = uname;
+
+            //opner = ParentForm;
 
             //fe = new Flightentry(f_name.Text, l_name.Text, father_name.Text, dob.Text, age.Text, address.Text, city.Text, state.Text, zip.Text, phone.Text, nic.Text);
 
@@ -45,17 +49,13 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
 
-            fe = new Flightentry(f_name.Text, l_name.Text, father_name.Text, dob.Text, age.Text, address.Text, city.Text, state.Text, zip.Text, phone.Text, nic.Text);
+            fe = new Flightentry(f_name.Text, l_name.Text, father_name.Text,passport.Text, dob.Text, age.Text, address.Text, city.Text, state.Text, zip.Text, phone.Text, nic.Text, employee);
             this.Hide();
             fe.Owner = this;
             fe.ShowDialog();
             this.Show();
         }
 
-        private void Passengerdetail_Shown(object sender, EventArgs e)
-        {
-
-        }
         
     }
      

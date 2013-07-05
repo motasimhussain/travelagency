@@ -18,10 +18,10 @@ namespace WindowsFormsApplication1
         protected string uid;
         protected string password;
 
-        MySqlDataAdapter mySqlDataAdapter;
-        MySqlCommandBuilder mySqlCommandBuilder;
-        DataTable dataTable;
-        BindingSource bindingSource;
+        protected MySqlDataAdapter mySqlDataAdapter;
+        protected MySqlCommandBuilder mySqlCommandBuilder;
+        protected DataTable dataTable;
+        protected BindingSource bindingSource;
 
 
         public DBConnect()
@@ -210,7 +210,7 @@ namespace WindowsFormsApplication1
         }
     }
 
-    public void Bind(DataGridView dataGridView, string tableName)
+    public virtual void Bind(DataGridView dataGridView, string tableName)
     {
         // please note that the following code is vulnerable
         string query = "SELECT * FROM " + tableName;
