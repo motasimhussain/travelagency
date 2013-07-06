@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1
 
 
 
-        public override List<string>[] Select(string field,string data)
+        public List<string>[] Select(string field,string data)
         {
             string query = "SELECT * FROM passenger_detail WHERE "+field+" = "+data+"";
 

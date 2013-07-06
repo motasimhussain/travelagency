@@ -62,13 +62,19 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //pd.insertData();
-
-            MessageBox.Show(f_name);
+            if (maskedTextBox1.Text != "")
+            {
+                
+            
 
             fd.Insert(f_name, l_name, father_name,passport, dob, age, address, city, state, zip, phone, nic, comboBox1.Text, comboBox2.Text, comboBox3.Text, textBox3.Text, textBox8.Text, dateTimePicker1.Text, textBox6.Text, maskedTextBox1.Text,employee);
 
             this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Enter Valid Data");
+            }
         }
 
         private void Flightentry_Load(object sender, EventArgs e)

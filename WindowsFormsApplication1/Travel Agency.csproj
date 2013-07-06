@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AirlineInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirlineInfo.Designer.cs">
+      <DependentUpon>AirlineInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="cancleflight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>travelagencyDataSet2.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AirlineInfo.resx">
+      <DependentUpon>AirlineInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cancleflight.resx">
       <DependentUpon>cancleflight.cs</DependentUpon>
     </EmbeddedResource>

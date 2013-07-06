@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
         //Passengerdetail pd = new Passengerdetail();
         Passengerdetail pd;
         salesRecord sr;
+        AirlineInfo airInf;
         string employee;
        
 
@@ -70,6 +71,13 @@ namespace WindowsFormsApplication1
         {
             sr = new salesRecord(employee);
             sr.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            airInf = new AirlineInfo();
+
+            airInf.ShowDialog();
         }
     }
 }

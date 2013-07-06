@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1
         ManagerScreen mgrForm = new ManagerScreen();
         //EmployeeScreen empForm = new EmployeeScreen();
         EmployeeScreen empForm;
+        online on;
 
         string uname;
 
@@ -182,6 +183,25 @@ namespace WindowsFormsApplication1
             {
                 cancel.PerformClick();
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            on = new online();
+
+            this.Hide();
+
+            on.Owner = this;
+
+            on.ShowDialog();
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox1.Text = "UserName";
+            textBox2.Text = "Password";
+            textBox1.Focus();
+
+            //this.Show();
         }
         
 
