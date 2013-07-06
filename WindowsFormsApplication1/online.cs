@@ -27,8 +27,11 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(maskedTextBox1.Text);
-            sr.Bind(dataGridView1,"passenger_detail","passport", maskedTextBox1.Text);
+            sr.Bind(dataGridView1,"passenger_detail","passport", maskedTextBox1.Text);   //search for passport number
+            if (dataGridView1.Rows.Count <= 0)                                           //if no matches found display No Record Found!!
+            {
+                MessageBox.Show("No Record Found!");
+            }
 
         }
     }

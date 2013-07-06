@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1
                     {
                         this.Hide();
 
-                        MessageBox.Show("Admin");
+                        //MessageBox.Show("Admin");
 
                         mgrForm.Owner = this;
                         mgrForm.ShowDialog();
@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1
                     else if (passCheck[3][i].Contains("Employee"))                             //employee evaluation
                     {
                         this.Hide();
-                        MessageBox.Show("Employee");
+                        //MessageBox.Show("Employee");
 
                         empForm = new EmployeeScreen(uname);
                         empForm.Owner = this;
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Return)                                             //random stuff =P
+            if (e.KeyChar == (char)Keys.Return)                                             //using enter to press a button
             {
                 signin.PerformClick();
             }

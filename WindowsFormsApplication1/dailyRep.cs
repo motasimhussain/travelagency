@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
 
         passengerDetailClass pdc = new passengerDetailClass();
+        double total = 0;
 
 
         public dailyRep()
@@ -24,6 +25,11 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            dataGridView1.Rows.Clear();
+            total = 0;
+            textBox1.Clear();
+
             List<string>[] dateCheck;
 
             dateCheck = pdc.Select();
@@ -33,6 +39,11 @@ namespace WindowsFormsApplication1
                 if (dateTimePicker1.Text == dateCheck[18][i])
                 {
                     dataGridView1.Rows.Add(dateCheck[1][i], dateCheck[2][i], dateCheck[3][i], dateCheck[4][i], dateCheck[12][i], dateCheck[20][i],dateCheck[21][i]);
+
+                    total = total + double.Parse(dateCheck[20][i]);
+
+                    textBox1.Text = total.ToString();
+
                     MessageBox.Show(dateCheck[2][i]);
                 }
             }

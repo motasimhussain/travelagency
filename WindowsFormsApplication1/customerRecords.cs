@@ -26,6 +26,12 @@ namespace WindowsFormsApplication1
             db.Bind(dataGridView1, "passenger_detail");
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
+
+
+
+
+
+            button5.Enabled = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -85,19 +91,19 @@ namespace WindowsFormsApplication1
             {
                 se.Bind(dataGridView2,"passenger_detail","first_name",textBox1.Text);
             }
-            else if (radioButton1.Checked == true && textBox1.Text != "")
+            else if (radioButton2.Checked == true && textBox1.Text != "")
             {
                 se.Bind(dataGridView2, "passenger_detail", "nic", textBox1.Text);
             }
-            else if (radioButton1.Checked == true && textBox1.Text != "")
+            else if (radioButton3.Checked == true && textBox1.Text != "")
             {
                 se.Bind(dataGridView2, "passenger_detail", "passport", textBox1.Text);
             }
-            else if (radioButton1.Checked == true && textBox1.Text != "")
+            else if (radioButton4.Checked == true && textBox1.Text != "")
             {
                 se.Bind(dataGridView2, "passenger_detail", "airline_name", textBox1.Text);
             }
-            else if (radioButton1.Checked == true && textBox1.Text != "")
+            else if (radioButton5.Checked == true && textBox1.Text != "")
             {
                 se.Bind(dataGridView2, "passenger_detail", "destination", textBox1.Text);
             }
@@ -106,6 +112,13 @@ namespace WindowsFormsApplication1
             {
                 tabControl1.SelectedTab = tabPage2;
             }
+
+            button5.Enabled = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabPage1.Show();
         }
     }
 }

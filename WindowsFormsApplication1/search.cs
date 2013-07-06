@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
         //}
 
 
-        public void Bind(DataGridView dataGridView, string tableName,string field,string data)
+        public void Bind(DataGridView dataGridView, string tableName,string field,string data)  //search data from a field and return data to datagridview
         {
             // please note that the following code is vulnerable
             string query = "SELECT * FROM "+tableName+" WHERE "+field+" = '"+data+"'";

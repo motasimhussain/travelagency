@@ -56,6 +56,20 @@ namespace WindowsFormsApplication1
             this.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dob_ValueChanged(object sender, EventArgs e)
+        {
+            int years = DateTime.Now.Year - dob.Value.Year;
+
+            if (dob.Value.AddYears(years) > DateTime.Now) years--;
+
+            age.Text = years.ToString();
+        }
+
         
     }
      

@@ -43,7 +43,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.f_name = new System.Windows.Forms.TextBox();
-            this.dob = new System.Windows.Forms.TextBox();
             this.address = new System.Windows.Forms.TextBox();
             this.city = new System.Windows.Forms.TextBox();
             this.zip = new System.Windows.Forms.TextBox();
@@ -56,7 +55,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.father_name = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.dob = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -74,12 +73,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(416, 12);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Back";
+            this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -240,13 +240,6 @@
             this.f_name.Size = new System.Drawing.Size(157, 20);
             this.f_name.TabIndex = 14;
             // 
-            // dob
-            // 
-            this.dob.Location = new System.Drawing.Point(137, 257);
-            this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(157, 20);
-            this.dob.TabIndex = 15;
-            // 
             // address
             // 
             this.address.Location = new System.Drawing.Point(137, 292);
@@ -343,24 +336,20 @@
             this.label14.Text = "Father Name";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // dob
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Buxton Sketch", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(12, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 40);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "  UBIT AIRLINE \r\nTRAVEL AGENCY";
+            this.dob.Location = new System.Drawing.Point(137, 254);
+            this.dob.Name = "dob";
+            this.dob.Size = new System.Drawing.Size(196, 20);
+            this.dob.TabIndex = 28;
+            this.dob.ValueChanged += new System.EventHandler(this.dob_ValueChanged);
             // 
             // Passengerdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 462);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dob);
             this.Controls.Add(this.father_name);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.passport);
@@ -373,7 +362,6 @@
             this.Controls.Add(this.zip);
             this.Controls.Add(this.city);
             this.Controls.Add(this.address);
-            this.Controls.Add(this.dob);
             this.Controls.Add(this.f_name);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -416,7 +404,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox f_name;
-        private System.Windows.Forms.TextBox dob;
         private System.Windows.Forms.TextBox address;
         private System.Windows.Forms.TextBox city;
         private System.Windows.Forms.TextBox zip;
@@ -429,6 +416,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox father_name;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DateTimePicker dob;
     }
 }

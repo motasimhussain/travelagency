@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (maskedTextBox1.Text != "")
+            if (maskedTextBox1.Text != "" && f_name != "" & passport != "" & nic != "" )
             {
                 
             
@@ -100,6 +100,11 @@ namespace WindowsFormsApplication1
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             MessageBox.Show("Enter valid data!");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

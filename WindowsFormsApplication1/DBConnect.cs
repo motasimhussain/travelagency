@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient; //Adding MySQL Library
+using MySql.Data.MySqlClient;                               //Adding MySQL Library
 using System.Windows.Forms;
 using System.Data;
 
