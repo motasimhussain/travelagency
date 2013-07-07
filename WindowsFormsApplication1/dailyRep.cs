@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
 
                     textBox1.Text = total.ToString();
 
-                    MessageBox.Show(dateCheck[2][i]);
+                    //MessageBox.Show(dateCheck[2][i]);
                 }
             }
 

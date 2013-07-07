@@ -130,6 +130,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "About";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // login_form
             // 

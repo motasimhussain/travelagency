@@ -84,5 +84,11 @@ namespace WindowsFormsApplication1
         {
             this.Close();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            About ab = new About();
+            ab.ShowDialog();
+        }
     }
 }

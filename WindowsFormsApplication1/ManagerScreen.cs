@@ -75,5 +75,11 @@ namespace WindowsFormsApplication1
             dr = new dailyRep();
             dr.ShowDialog();
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            About ab = new About();
+            ab.ShowDialog();
+        }
     }
 }

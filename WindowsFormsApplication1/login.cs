@@ -203,6 +203,12 @@ namespace WindowsFormsApplication1
 
             //this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            About ab = new About();
+            ab.ShowDialog();
+        }
         
 
     }
