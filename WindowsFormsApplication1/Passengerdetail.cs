@@ -21,6 +21,10 @@ namespace WindowsFormsApplication1
         public Passengerdetail(string uname)
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = TransparencyKey;
+            this.BackColor = Color.Black;
+            this.TransparencyKey = BackColor;
 
             employee = uname;
 

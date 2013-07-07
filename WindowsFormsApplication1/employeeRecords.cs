@@ -16,6 +16,10 @@ namespace WindowsFormsApplication1
         public employeeRecords()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = TransparencyKey;
+            this.BackColor = Color.White;
+            this.TransparencyKey = BackColor;
         }
 
         DBConnect db = new DBConnect();

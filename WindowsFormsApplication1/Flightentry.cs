@@ -35,6 +35,10 @@ namespace WindowsFormsApplication1
         public Flightentry(string f_name,string l_name,string father_name,string passport,string dob,string age,string address,string city,string state,string zip,string phone,string nic,string uname)
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = TransparencyKey;
+            this.BackColor = Color.Black;
+            this.TransparencyKey = BackColor;
 
 
 

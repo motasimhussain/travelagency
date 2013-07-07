@@ -14,11 +14,15 @@ namespace WindowsFormsApplication1
     {
 
         DBConnect db = new DBConnect();
-        search se = new search();
+        search se;
 
         public customerRecords()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = TransparencyKey;
+            this.BackColor = Color.Black;
+            this.TransparencyKey = BackColor; 
         }
 
         private void customerRecords_Load(object sender, EventArgs e)
@@ -87,6 +91,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            se = new search();
             if(radioButton1.Checked == true && textBox1.Text != "")
             {
                 se.Bind(dataGridView2,"passenger_detail","first_name",textBox1.Text);
@@ -119,6 +124,43 @@ namespace WindowsFormsApplication1
         private void button5_Click(object sender, EventArgs e)
         {
             tabPage1.Show();
+        }
+
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)                                             //using enter to press a button
+            {
+                button1.PerformClick();
+            }
+            else if (e.KeyChar == (char)Keys.Escape)
+            {
+                button2.PerformClick();
+            }
         }
     }
 }

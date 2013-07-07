@@ -21,6 +21,10 @@ namespace WindowsFormsApplication1
         public dailyRep()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = TransparencyKey;
+            this.BackColor = Color.Black;
+            this.TransparencyKey = BackColor;
         }
 
         private void button1_Click(object sender, EventArgs e)

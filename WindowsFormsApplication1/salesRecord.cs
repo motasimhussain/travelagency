@@ -13,13 +13,17 @@ namespace WindowsFormsApplication1
     public partial class salesRecord : Form
     {
         string employee;
-        search se = new search();
+        search se;
         passengerDetailClass pd = new passengerDetailClass();
         double total = 0;
 
         public salesRecord(string user)
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = TransparencyKey;
+            this.BackColor = Color.Black;
+            this.TransparencyKey = BackColor;
 
             employee = user;
         }
@@ -36,6 +40,11 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            se = new search();
+
+            textBox1.Clear();
+            total = 0;
+
             se.Bind(dataGridView1, "passenger_detail", "employee", employee);
 
             List<string>[] addPrice;
@@ -48,6 +57,11 @@ namespace WindowsFormsApplication1
 
                 textBox1.Text = total.ToString();
             }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
